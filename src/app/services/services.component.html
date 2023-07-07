@@ -1,0 +1,42 @@
+<mat-accordion>
+    <mat-expansion-panel (opened)="stServicePanelOpenState = true"
+                         (closed)="stServicePanelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Service 1
+        </mat-panel-title>
+        <mat-panel-description>
+          General Programming
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <img src="http://studentweb.cencol.ca/ytam17/comp229/code.jpg" alt="General Programming" width="200" height="250">
+      <p>C++, C#, Java, Python, JavaScript, Angular JS, SQL</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="ndServicePanelOpenState = true"
+                         (closed)="ndServicePanelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Service 2
+        </mat-panel-title>
+        <mat-panel-description>
+          Web development
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <img src="http://studentweb.cencol.ca/ytam17/comp229/webpage.jpg" alt="Web development" width="200" height="250">
+      <p>Frontend & Backend</p>
+    </mat-expansion-panel>
+    <mat-expansion-panel (opened)="rdServicePanelOpenState = true"
+                         (closed)="rdServicePanelOpenState = false">
+      <mat-expansion-panel-header>
+        <mat-panel-title>
+          Service 3
+        </mat-panel-title>
+        <mat-panel-description>
+            Mobile Applications
+        </mat-panel-description>
+      </mat-expansion-panel-header>
+      <img src="http://studentweb.cencol.ca/ytam17/comp229/mobile.png" alt="Mobile Applications" width="200" height="250">
+      <p>Frontend & Backend</p>
+    </mat-expansion-panel>
+  </mat-accordion>
+  

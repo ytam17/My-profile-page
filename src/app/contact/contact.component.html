@@ -1,0 +1,79 @@
+<br>
+<mat-card>
+    <mat-card-header>
+      <mat-card-title>Contact Information</mat-card-title>
+      <mat-card-subtitle>Address: 23 Forest Manor Road</mat-card-subtitle>
+      <mat-card-subtitle>Mobile: (+1) 647-888-8123</mat-card-subtitle>
+      <mat-card-subtitle>lable1111111@gmail.com</mat-card-subtitle>
+    </mat-card-header>
+  </mat-card>
+  <br>
+  <br>
+  <mat-card>
+    <mat-card-header>
+      <mat-card-title>Please fill out the below contact form. I will reach you ASAP!</mat-card-title>
+    </mat-card-header>
+  </mat-card>
+<mat-stepper orientation="vertical" [linear]="isLinear" #stepper>
+    <mat-step [stepControl]="firstFormGroup">
+      <form [formGroup]="firstFormGroup">
+        <ng-template matStepLabel>Fill out your name</ng-template>
+        <mat-form-field>
+          <mat-label>Name</mat-label>
+          <input matInput placeholder="Last name, First name" formControlName="firstCtrl" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="secondFormGroup">
+      <form [formGroup]="secondFormGroup">
+        <ng-template matStepLabel>Fill out your email address</ng-template>
+        <mat-form-field>
+          <mat-label>Email Address</mat-label>
+          <input matInput formControlName="secondCtrl" placeholder="123@gmail.com" required>
+        </mat-form-field>
+        <div>
+          <button mat-button matStepperPrevious>Back</button>
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
+    <mat-step [stepControl]="thirdFormGroup">
+        <form [formGroup]="thirdFormGroup">
+          <ng-template matStepLabel>Fill out your contact number</ng-template>
+          <mat-form-field>
+            <mat-label>Contact Number</mat-label>
+            <input matInput formControlName="thirdCtrl" placeholder="647-1234-5432" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+      <mat-step [stepControl]="fourthFormGroup">
+        <form [formGroup]="fourthFormGroup">
+          <ng-template matStepLabel>Leave your message</ng-template>
+          <mat-form-field>
+            <mat-label>Message</mat-label>
+            <input matInput formControlName="fourthCtrl" required>
+          </mat-form-field>
+          <div>
+            <button mat-button matStepperPrevious>Back</button>
+            <button mat-button matStepperNext>Next</button>
+          </div>
+        </form>
+      </mat-step>
+    <mat-step>
+      <ng-template matStepLabel>Done</ng-template>
+      <p>You are now done.</p>
+      <div>
+        <button mat-button matStepperPrevious>Back</button>
+        <button mat-button (click)="stepper.reset()">Reset</button>
+        <button mat-stroked-button (click)="submit()">Submit</button>
+      </div>
+    </mat-step>
+</mat-stepper>
+  
